@@ -42,7 +42,7 @@ class HomeViewModelTests {
         /// Given...
         let repository = MockHomeRepository()
         let viewModel = HomeViewModel(repository: repository)
-        repository.expectedResult = .failure(.serverError)
+        repository.expectedResult = .failure(TestError())
         
         let displayErrorBinding = Binding {
             self.displayErrorValue
@@ -55,5 +55,6 @@ class HomeViewModelTests {
         
         /// Then...
         #expect(displayErrorValue == true)
+        #expect(viewModel.articles.isEmpty)
     }
 }
