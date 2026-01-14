@@ -1,10 +1,3 @@
-//
-//  CatchDesignTests.swift
-//  CatchDesignTests
-//
-//  Created by Anna Fortuna on 14/01/2026.
-//
-
 import Testing
 
 struct CatchDesignTests {

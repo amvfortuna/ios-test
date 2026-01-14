@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel = HomeViewModel(repository: ConcreteHomeRepository())
+    @State var displayError: Bool = false
     
     var body: some View {
         List {
@@ -10,7 +11,9 @@ struct HomeView: View {
             }
         }
         .onAppear() {
-            viewModel.loadArticles()
+            Task {
+                await viewModel.loadArticles($displayError)
+            }
         }
     }
 }
