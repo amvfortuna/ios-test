@@ -1,14 +1,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(viewModel.articles) { article in
+                Text(article.title)
+            }
         }
-        .padding()
+        .onAppear() {
+            viewModel.loadArticles()
+        }
     }
 }
 
