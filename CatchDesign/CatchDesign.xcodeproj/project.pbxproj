@@ -34,11 +34,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D50593312F1747D00085C2E8 /* CatchDesign */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CatchDesign;
-			sourceTree = "<group>";
-		};
 		D505933F2F1747D10085C2E8 /* CatchDesignTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CatchDesignTests;
@@ -47,6 +42,11 @@
 		D50593492F1747D10085C2E8 /* CatchDesignUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CatchDesignUITests;
+			sourceTree = "<group>";
+		};
+		D50593BD2F1905760085C2E8 /* CatchDesign */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CatchDesign;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +80,7 @@
 		D50593262F1747D00085C2E8 = {
 			isa = PBXGroup;
 			children = (
-				D50593312F1747D00085C2E8 /* CatchDesign */,
+				D50593BD2F1905760085C2E8 /* CatchDesign */,
 				D505933F2F1747D10085C2E8 /* CatchDesignTests */,
 				D50593492F1747D10085C2E8 /* CatchDesignUITests */,
 				D50593302F1747D00085C2E8 /* Products */,
@@ -113,7 +113,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D50593312F1747D00085C2E8 /* CatchDesign */,
+				D50593BD2F1905760085C2E8 /* CatchDesign */,
 			);
 			name = CatchDesign;
 			packageProductDependencies = (
