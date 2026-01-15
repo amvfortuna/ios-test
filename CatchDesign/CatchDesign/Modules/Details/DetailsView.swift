@@ -6,7 +6,7 @@ struct DetailsView: View {
     var body: some View {
         ScrollView {
             Text(viewModel.article.content)
-                .padding(25)
+                .padding(.horizontal, 25)
                 .navigationTitle(viewModel.article.title)
         }
         .scrollBounceBehavior(.basedOnSize)

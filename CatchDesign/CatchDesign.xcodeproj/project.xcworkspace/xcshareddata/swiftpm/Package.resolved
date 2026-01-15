@@ -1,5 +1,5 @@
 {
-  "originHash" : "0aafbf2834daa3a6b647498ff9ac56876da8fa51b31a7a77f4bd6dde5d893e07",
+  "originHash" : "a27bcf38e313a298d00fd67600cee3042f42fc9d1cb5caa1062740eda23c88e0",
   "pins" : [
     {
       "identity" : "pulltorefreshswiftui",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "9e1eb22e5f035db5dd781ad0d2aad371eb2f787b",
         "version" : "1.6.5"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "b685b549fe4d8ae265fc7a2f27d0789720425d69",
+        "version" : "2.10.0"
       }
     }
   ],

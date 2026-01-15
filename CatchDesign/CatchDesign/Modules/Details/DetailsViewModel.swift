@@ -1,4 +1,4 @@
-class DetailsViewModel {
+final class DetailsViewModel {
     
     let article: Article
     

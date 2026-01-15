@@ -1,9 +1,16 @@
-import Combine
 import SwiftUI
+import Observation
 
-class HomeViewModel: ObservableObject {
+protocol HomeViewModel: Observable {
+    var articles: [Article] { get }
+    func loadArticles(_ displayError: Binding<Bool>) async
+    func constructDetailsView(article: Article) -> DetailsView
+}
+
+@Observable
+final class ConcreteHomeViewModel: HomeViewModel {
     private var repository: HomeRepository
-    @Published var articles = [Article]()
+    var articles = [Article]()
     
     init(repository: HomeRepository) {
         self.repository = repository

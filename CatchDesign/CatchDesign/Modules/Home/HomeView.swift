@@ -2,7 +2,7 @@ import SwiftUI
 import PullToRefreshSwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel(repository: ConcreteHomeRepository(networkClient: ConcreteNetworkClient(urlSession: URLSession.shared)))
+    var viewModel: HomeViewModel
     @State var displayError: Bool = false
     @State var isRefreshing: Bool = false
     
@@ -79,10 +79,15 @@ struct HomeView: View {
                         viewModel.constructDetailsView(article: article)
                     }
                 }
+                .alert("An error occurred while fetching content.", isPresented: $displayError, actions: {
+                    Button("OK", role: .cancel) {}
+                }, message: {
+                    Text("Please try again later.")
+                })
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: ConcreteHomeViewModel(repository: ConcreteHomeRepository(networkClient: ConcreteNetworkClient(urlSession: URLSession.shared))))
 }

@@ -4,7 +4,7 @@ protocol HomeRepository {
     func fetchArticles() async throws -> [Article]
 }
 
-class ConcreteHomeRepository: HomeRepository {
+final class ConcreteHomeRepository: HomeRepository {
     
     var networkClient: NetworkClient
     
