@@ -1,38 +1,23 @@
-# iOS Developer Test
+# Summary of what's inside the code
 
-A simple test for iOS Developers
+- Pure SwiftUI app
+- Simple MVVM architecture
+- Unit testing with Swift Testing
+- Dependency Injection with Swinject
+- SPM for managing dependencies (Swinject and PullToRefreshSwiftUI)
 
-## Instructions
+## Requirements
 
-1. Fork or clone this repo
-2. Create an iOS project in Xcode (latest stable version recommended).
-3. The app should support the latest iOS version and be written in Swift.
-4. Use the design located here: https://www.figma.com/file/Q8IUvJLAxPfR2FsomFhQSV/Catch-Design-–-iOS-Test?node-id=0%3A1
-5. Make the app load the json file remotely from this repo (i.e. `https://raw.githubusercontent.com/catchnz/ios-test/master/data/data.json`) as per the design
-6. Parse and display the data as per the provided Figma design
-7. Email tech-tests@catchdesign.co.nz with:
-    1. A link to your repo OR
-    2. A zip file of your project including git config/metadata
+- Xcode 26.2
+- iOS 17.6 and up
 
-### Guidelines
+## How to run
+Simply clone the project, open up Xcode, and run!
 
-1. Your repo needs to include at minimum anything required to get the app working.
-2. Detailed instructions should be provided in the `README.md` file to setup and run the app.
-3. The UI should closely follow the Figma design.
-4. Remote JSON should be fetched and parsed programmatically.
-5. The app should be written in Swift, including using SwiftUI and Combine.
-6. Let us know how long you spent on it
+#### Note
+This project runs just fine with iOS 26, but there's a relatively minor UI issue related to Liquid Glass: selecting an item in the list view will briefly make the top of the page translucent while transitioning to the details view, which is slightly annoying but it doesn't affect the functionality so I decided to leave it at that at the interest of time.
 
-### Assessment Guidelines
-* Comprehension
-* Setup/running the code should be smooth and simple
-* Selection of frameworks
-* Code should be:
-    * clean
-    * well documented / annotated / typed
-    * simple
-    * easy to maintain
-* Good package management and git practices
-* Documentation and architecture
-* Unit Tests
-* General code quality, organisation and best practices
+## How many hours did I spend on this project
+I started development around midday yesterday (14 Jan 2025) and finished tonight (15 Jan 2025), spending approximately 12 hours of development.
+
+While the app itself is simple, I wanted to take this opportunity to use some of the newer technologies introduced in iOS, which adds to the development time as I was learning on the go. Overall, I had fun doing this project as I was able to play around with stuff I've never used before :) 
