@@ -21,7 +21,7 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func navigateToDetailsView(article: Article) -> DetailsView {
+    func constructDetailsView(article: Article) -> DetailsView {
         let viewModel = DetailsViewModel(article: article)
         let detailsView = DetailsView(viewModel: viewModel)
         return detailsView

@@ -57,4 +57,22 @@ class HomeViewModelTests {
         #expect(displayErrorValue == true)
         #expect(viewModel.articles.isEmpty)
     }
+    
+    @Test @MainActor
+    func testConstructDetailsView() async {
+        /// Given...
+        let viewModel = HomeViewModel(repository: MockHomeRepository())
+        let article = Article(
+            id: 1,
+            title: "Title",
+            subtitle: "Subtitle",
+            content: "Content"
+        )
+        
+        /// When...
+        let detailsView = viewModel.constructDetailsView(article: article)
+        
+        /// Then...
+        #expect(detailsView.viewModel.article == article)
+    }
 }

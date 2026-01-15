@@ -5,7 +5,6 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel(repository: ConcreteHomeRepository(networkClient: ConcreteNetworkClient(urlSession: URLSession.shared)))
     @State var displayError: Bool = false
     @State var isRefreshing: Bool = false
-    @State private var rotationDegrees: CGFloat = 0.0
     
     var body: some View {
         if viewModel.articles.isEmpty {
@@ -77,7 +76,7 @@ struct HomeView: View {
                     .listStyle(.plain)
                     .frame(width: scrollViewSize.width, height: scrollViewSize.height)
                     .navigationDestination(for: Article.self) { article in
-                        viewModel.navigateToDetailsView(article: article)
+                        viewModel.constructDetailsView(article: article)
                     }
                 }
         }
