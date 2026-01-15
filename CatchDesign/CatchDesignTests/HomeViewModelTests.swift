@@ -16,7 +16,7 @@ class HomeViewModelTests {
             .init(id: 3, title: "Third", subtitle: "Subtitle", content: "Something content")
         ]
         let repository = MockHomeRepository()
-        let viewModel = HomeViewModel(repository: repository)
+        let viewModel = ConcreteHomeViewModel(repository: repository)
 
         let displayErrorBinding = Binding {
             self.displayErrorValue
@@ -41,7 +41,7 @@ class HomeViewModelTests {
     func testLoadArticlesFailed() async {
         /// Given...
         let repository = MockHomeRepository()
-        let viewModel = HomeViewModel(repository: repository)
+        let viewModel = ConcreteHomeViewModel(repository: repository)
         repository.expectedResult = .failure(TestError())
         
         let displayErrorBinding = Binding {
@@ -61,7 +61,7 @@ class HomeViewModelTests {
     @Test @MainActor
     func testConstructDetailsView() async {
         /// Given...
-        let viewModel = HomeViewModel(repository: MockHomeRepository())
+        let viewModel = ConcreteHomeViewModel(repository: MockHomeRepository())
         let article = Article(
             id: 1,
             title: "Title",

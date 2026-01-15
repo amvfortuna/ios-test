@@ -61,11 +61,12 @@ struct HomeView: View {
                     List(viewModel.articles) { article in
                         HStack {
                             Text(article.title)
+                                .fixedSize(horizontal: true, vertical: true)
                             NavigationLink(value: article, label: { EmptyView() })
                                 .opacity(0)
-                            Spacer()
                             Text(article.subtitle)
                                 .lineLimit(1)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .foregroundStyle(.secondary)
                             Image(systemName: "chevron.right")
                                 .foregroundColor(.primary)
