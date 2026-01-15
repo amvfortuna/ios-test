@@ -1,0 +1,15 @@
+{
+  "originHash" : "0aafbf2834daa3a6b647498ff9ac56876da8fa51b31a7a77f4bd6dde5d893e07",
+  "pins" : [
+    {
+      "identity" : "pulltorefreshswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shakurocom/PullToRefreshSwiftUI",
+      "state" : {
+        "revision" : "9e1eb22e5f035db5dd781ad0d2aad371eb2f787b",
+        "version" : "1.6.5"
+      }
+    }
+  ],
+  "version" : 3
+}

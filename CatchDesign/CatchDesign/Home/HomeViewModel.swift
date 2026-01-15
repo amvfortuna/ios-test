@@ -20,4 +20,10 @@ class HomeViewModel: ObservableObject {
             displayError.wrappedValue = true
         }
     }
+    
+    func navigateToDetailsView(article: Article) -> DetailsView {
+        let viewModel = DetailsViewModel(article: article)
+        let detailsView = DetailsView(viewModel: viewModel)
+        return detailsView
+    }
 }
